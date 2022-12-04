@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model TP3.Models.Person
+
+}
+@{
+    ViewData["Title"] = " PERSON INFOS ";
+}
+
+
+
+@{
+    TP3.Models.Person p = Model;
+    if (Model == null)
+    {
+        <h1 class="alert-danger">
+            L'id n'existe pas' !
+        </h1>
+    }
+    else
+    {<div style="padding-left:200px;padding-top:30px;margin-top:100px;margin-left:200px;margin-right:200px;padding-bottom:10px; border-radius:10px;background-color:blueviolet">
+        <h1 style="color:blue">Person n°@p.Id informations</h1>
+        <br/>
+        <dl class="row ">
+            <dt class="col-sm-2" style="color:aqua">
+                Id
+            </dt>
+            <dd class="col-sm-10" style="color:white">
+                @p.Id
+            </dd>
+            <dt class="col-sm-2" style="color:aqua">
+                First Name
+            </dt>
+                <dd class="col-sm-10" style="color:white">
+                @p.FirstName
+            </dd>
+            <dt class="col-sm-2" style="color:aqua">
+                Last Name
+            </dt>
+                <dd class="col-sm-10" style="color:white">
+                @p.LastName
+            </dd>
+            <dt class="col-sm-2" style="color:aqua">
+                Email
+            </dt>
+                <dd class="col-sm-10" style="color:white">
+                @p.Email
+            </dd>
+            <dt class="col-sm-2" style="color:aqua">
+                Image Url
+            </dt>
+                <dd class="col-sm-10" style="color:white">
+                @p.Image
+            </dd>
+            <dt class="col-sm-2" style="color:aqua">
+                Country
+            </dt>
+                <dd class="col-sm-10" style="color:white">
+                @p.Country
+            </dd>
+        </dl>
+        </div>
+
+    }
+}
+
